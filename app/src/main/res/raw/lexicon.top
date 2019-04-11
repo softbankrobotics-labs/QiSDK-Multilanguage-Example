@@ -1,0 +1,403 @@
+topic: ~lexicon_enu()
+
+pronunciation:(I) [i]
+
+dynamic:robotname
+dynamic:friendlyname
+dynamic:all_descriptions
+dynamic:all_languages
+dynamic:myrobotname
+
+dynamic:app-name
+dynamic:app-dance
+dynamic:app-game
+dynamic:app-story
+
+dynamic:klg_thing
+dynamic:klg_definition
+dynamic:klg_date
+dynamic:registered_name
+
+dynamic:available_languages
+####test
+dynamic:robot_abilities
+dynamic:topic_trigger1
+dynamic:topic_trigger2
+dynamic:topic_trigger3
+dynamic:topic_trigger4
+
+
+
+#=================================================================#
+### PRONUNCIATIONS ####
+#=================================================================#
+pronunciation:(nao) [now]
+pronunciation:(Nao) [now]
+
+
+#==================================================================#
+##### Robot concepts #####
+concept:(ald_robots) [~robotname ~myrobotname Nao Pepper Peppersan Romeo]
+#==================================================================#
+
+#==================================================================#
+##### Voice tweaking #####
+concept:(neutral) \style=neutral\ \rspd=100\ \vct=110\
+concept:(neutral_slow) \style=neutral\ \vct=105\ \rspd=100\
+concept:(joyful) \style=joyful\ \rspd=90\ \vct=95\
+concept:(didactic) \style=didactic\ \rspd=105\ \vct=110\
+
+concept:(hello) [
+    hello howdy hiya hi morning
+    "hey there"
+    "{good} [morning afternoon evening]"
+
+#    "how's it [going hanging]"
+#    "you [alright "doing ok"]"
+]
+concept:(thank_you) [
+    "I ["thank you" "give you my thanks"]"
+    "thank you {"very much" "a [million lot]" "from the bottom of my heart"}"
+    "thanks {"a lot"}"
+]
+
+concept:(help) [
+    "help me {please}"
+    "{"would you" ~can_you} help me {please} ?"
+    "your assistance please"
+    "how ~can_you help me ?"
+    "~can_you give me {some} [information informations assistance] ?"
+    "I need {some} [information informations details help assistance]"
+    "give me a hand"
+    "~i_am looking for {some} [info information "more details" help assistance]"
+
+]
+
+concept:(shut_up) [
+    "cut it out"
+    "knock it off"
+    "["could you" "can you"] {please} ["be quiet" "shut up"]"
+    "I can't take it any more"
+    "[keep remain] [quiet silent]"
+    "{please} {god} ["shut up" "be quiet"]"
+    "don't talk {"to me"} [anymore "any longer"]"
+    shush
+    "fuck off"
+    "I don't want to [speak talk "discuss {it}"]  anymore"
+    "["let's stop" stop end] the [discussion conversation chat]"
+    "{let's please} stop [talking speaking discussing chatting]"
+    "keep it quiet"
+    "be quiet {please}"
+    "shut [it "your mouth"]"
+]
+concept:(stop_it) ~shut_up
+
+concept:(stop_application) [
+    "[stop quit leave close] [this the that] [software app application program dialog topic activity game]"
+    "stop [it this that]"
+    "[that it] no longer interests me"
+    "that's enough"
+    "that's ["a pain" "not interesting" useless boring]"
+    "["I've" "I have"] ["had it" "had enough" "had it up to here" "have had a belly full of it"]"
+]
+concept:(restart_application) [
+    "[restart "start again" reboot replay] [this the that] [software app application program dialog topic activity]"
+    "go back to the [beginning start]"
+    "rewind please"
+    "~i_want_to start again"
+]
+concept:(repeat_it) [
+    "[restate repeat] {me} [the your] {last} question"
+    "~what_is the question {again}?"
+    "repeat ["the sentence" "your last sentence" "what you just said"] {again} {please}"
+    "repeat {please}"
+    "{~can_you} repeat {please}?"
+    "ask {me} the question {again "one more time"}"
+    "~can_you ask {me} the question {again "one more time"}?"
+    "tell ["it to me" me] again"
+    "what [is was] the question {again}?"
+    "what ["did you say" "were you [saying "asking me"]"] {again}?"
+    "ask {me} [the that] question {again}"
+    "repeat [it please]"
+    "come again"
+    "[say ask] {that} again"
+    "what was the question?"
+    "do [it that "[the this that] [animation motion movement thing sound noise]"] again {please}"
+    "~can_you do [it that "[the this that] [animation motion movement thing sound noise]"] again {please}?"
+]
+
+concept:(come_to_me) [
+    "[come walk] [here closer "{next} to me"]"
+    "get [here closer]"
+    "[move come go] forward"
+]
+
+concept:(i_want_to) ["I ["want to" wanna]" "[I'll I'd] [like love] to" "I wish [to "I can"]" "I'm looking {forward} to" "I {really} ~want_to"]
+concept:(want_to) ["[want wish "would [like love]"] to" wanna "need {to}"]
+
+concept:(can_i) [
+    "[can could may] [I we]"
+    "[I'd "I would"] like to"
+    "do you agree if I"
+    "is it possible [to "that I"]"
+]
+
+concept:(i_dont_care) [
+    "~i_do_not [care "give a shit"]"
+    whatever
+    "~i_am_not interested"
+    "I have no interest"
+    "I couldn't care less"
+    "I {really} don't give a [damn shit "two cents" "rat's ass"]"
+    "{it this that} ~doesnt interest me {anymore "at all" "in the least"}"
+    "who cares"
+]
+
+concept:(i_do_not) ["I do not" "I don't"]
+
+concept:(doesnt) [doesn't "does not"]
+concept:(i_did_not) ["I did not" "I didn't"]
+concept:(i_have_not) ["I haven't {got gotten}" "I don't have {got gotten}" "I do not have {got gotten}" "I have not {got gotten}"]
+concept:(i_dont_know) [
+    "~i_do_not know {"anything about that"}"
+    "I know nothing"
+    "~i_have_not the least idea"
+    "{I} [dunno "don't know"]"
+    "~what_is that"
+    "~i_have {never} heard {"of that"}"
+    "I have no [clue idea]"
+    "~i_do_not have ["a clue" "the slightest idea"]"
+    "you [decide "tell me"]"
+]
+concept:(what_is) [
+    "{"~can_you tell me" "do you know" "tell me"} [
+        what's
+        "what is"
+    ]"
+]
+concept:(i_have) ["I've {got gotten}" "I have {got gotten}"]
+
+concept:(can_you) [
+    "[can will could] you {please}"
+    "do you think you could"
+    "are you [ready able] to"
+    "do you know how to"
+]
+concept:(dont) [don't "do not"]
+concept:(didnt) [didn't "did not"]
+concept:(havent) [haven't "have not"]
+concept:(i_am) [I'm "I am"]
+concept:(i_am_not) ["I'm not" "I am not" "I ain't"]
+concept:(it_is) [it's that's "[it that this] [is was]" "{"I think" well "in my opinion"} [it's "it is"]"
+"it's without doubt"]
+concept:(you_are) [you're "you are"]
+
+concept:(i_didnt_understand) [
+    "{sorry} [~i_did_not ~i_do_not] [understand grasp get catch] {it that "anything {"at all"}" zilch nada you "a thing" "what you {just} said"}"
+    "~i_have_not understood"
+    "[~i_dont_know "~i_do_not [see get understand]"] ["what you mean" "what you're talking about"]"
+    "what is [it this that]?"
+    "~i_do_not [understand get] {it that this}"
+    "what do you [mean want say]?"
+    "what are you [saying "trying to say" "talking about"]?"
+    "[it that] doesn't make sense"
+]
+concept:(you_didnt_understand) [
+    "you [~didnt ~dont] [understand grasp get] [anything {"at all"} "a thing" "{"a word of"} what ["I say" "I'm saying"]" zilch nada]"
+    "it's not that {"at all"}"
+    "you {still} [~didnt ~havent ~dont] understand [anything "very well"]"
+    "you're wrong"
+    "you [~didnt ~dont] get it"
+]
+
+concept:(im_good) [
+    "{~i_am} {very} [well wonderful great terrific amazing superb splendid fine]"
+    "~i_am [good "full of get up and go" "in a great mood"]"
+    "not bad"
+    "I feel in shape"
+    super
+    perfect
+    "all's well"
+    "{very} good {thanks}"
+    "doing well {thanks}"
+    "it goes [well super perfect]"
+    "hey yeah I'm good"
+    "rather well"
+    "goes great"
+]
+concept:(im_ok) [
+    "~i_am ok"
+    "so so"
+    "not {too} bad"
+    "well enough"
+    meh
+    average
+]
+concept:(i_dont_feel_good) [
+    "it's not going so well"
+    "I don't feel ["{very} well" good "at my best" special great "in "the best" shape"]"
+    "I've been better"
+    "it goes ["{very rather pretty} poorly" "not {very} well"]"
+    "I hurt myself"
+    "I hurt {myself}"
+    "not {very} well"
+    "not good"
+    "~i_am_not so good"
+    "not super"
+    "I'm not in the best shape"
+    "I have a [sprain tendonitis break "twisted ankle"]"
+    "I [open cut broke] {my}"
+    "{super} [bad badly]"
+]
+concept:(im_sick) [
+    "~i_am {"a little" "a bit" very feeling} [ill sick snuffly queasy congested]"
+    "~i_have ["a {"{very} bad"} [headache "sore throat" "stomach ache" cold "stiff neck" "throat infection" "sore throat" strep migraine "stomach [flu ache]" cough]" "an {ear} infection" "the flu" blisters "chicken pox" measles]"
+    "~i_am coughing"
+    "my head hurts"
+]
+concept:(im_tired) [
+    "I need to {"go to" "get some"} sleep"
+    "["~i_am {feeling}" "I feel"] {suddenly "a [little bit]" very super too} [
+        tired
+        exhausted
+        "worn out"
+        dead
+        "knocked out"
+        knackered
+        "out of it"
+        spacey
+        sleepy
+        drowsy
+    ]"
+]
+
+concept:(yes) [
+    e:Dialog/Yes
+    "{oh} [yes yep yeah] {please "me too" "of course" "I [am do did]" sure}"
+    "[ok okay] {sure "why not"}"
+    good
+    right
+    alright
+    "{possibly} maybe"
+    "all right"
+    nice
+    "of course"
+    "sure {"I do"}"
+    true
+    "let's go"
+    "do it"
+    "go [on ahead "for it"]"
+    "~it_is [it right good certain]"
+    "~it_is true"
+    "you're right"
+    perfect
+    "why not"
+    absolutely
+    naturally
+    totally
+    definitely
+    "go ahead"
+    "{yes yep yeah} [I'd "I would"] love [to that]"
+    "[with my] pleasure"
+    "if you want to"
+    indeed
+    "no [problem problems worries problemo]"
+    "not a problem"
+    "no doubt"
+    "so to speak"
+    "[good excellent] idea"
+    exactly
+    "very well"
+    "you got it"
+    awesome
+    excellent
+    "it sure is"
+    "we sure are"
+    "I agree"
+    "I don't mind"
+    "{it} sounds [good great fun]"
+    "feel free {"to do it"}"
+    once
+    "bring it on"
+    "I guess so"
+    "let's do it"
+    "if you want"
+    "great idea"
+    "sounds fun"
+    "cool"
+    "as you [wish want]"
+    sometimes
+    "it happens"
+    scarcely
+]
+
+concept:(confirmation) [~yes]
+concept:(negation) [~no]
+
+concept:(yes2)[yes]
+#------------------------------------------------------------------#
+concept:(no) [
+    e:Dialog/No
+    "[no nah nope] {thanks "thank you" "[it's that's] [enough fine ok]"}"
+    "no {fucking} way"
+    "yeah right"
+    "{no} not [really "at all" "in the least" "right now" exactly "so much"]"
+    "I'm not interested"
+    "{no} ["I don't want to" "I'm not" "I don't"]"
+    "{I'm} not sure"
+    "i don't think so"
+    "I'll think about it"
+    "not at all"
+    "[definitely absolutely probably totally] not"
+    "in your dreams"
+    "[were are] you dreaming"
+    "dream on"
+    "not for ["the time being" "the moment"]"
+    "not so much"
+    "I ["don't agree" disagree]"
+    "no that'll work {thanks}"
+    "no it'll be fine {thanks}"
+    "no it's ok"
+    "that's not true"
+    "that's false"
+    "absolutely not"
+    "not really"
+    "not exactly"
+    "not {quite} yet"
+    "{it's} none of your business"
+    "it doesn't involve you"
+    "why do you give a shit"
+    "what are you getting involved in"
+    "what do you give a shit about"
+    "mind your own business"
+    "what's it got to do with you"
+    "never {"in my life"}"
+    "it doesn't interest me"
+    "it doesn't tempt me"
+    "no thank you"
+    "not especially"
+    "no question"
+    "it's not {exactly} that"
+    "~you_are [mistaken wrong]"
+    "I don't feel like it"
+    "not now"
+    "maybe later"
+    "another time"
+]
+
+concept:(i_dont_think_so)
+[
+"I don't think so"
+"I think it's not [right true]"
+"I guess not"
+]
+
+concept:(do_you_have) ["{do} you have" "have you got"]
+
+concept:(can_i_shorter) [
+"[can could may] I"
+"[I'd "I would"] like to"
+]
+
+
+

@@ -1,0 +1,462 @@
+topic: ~lexicon()
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+#=================================================================#
+### PRONUNCIATIONS ####
+#=================================================================#
+
+pronunciation:(à) [a]
+pronunciation:(û) [u]
+
+pronunciation:(get) [guète]
+pronunciation:(lucky) [leuqui]
+pronunciation:(harder) [ardeur]
+pronunciation:(better) [béteur]
+pronunciation:(style) [staillele]
+pronunciation:(Pepper) [pépeur]
+pronunciation:(pepper) [pépeur]
+pronunciation:(wu) [wou]
+pronunciation:(gan) [gane]
+pronunciation:(jinyu) [jinhyou]
+pronunciation:(bei) [béï]
+pronunciation:(min) [mine]
+pronunciation:(xiang) [xiangue]
+pronunciation:(saidi) [saïdi]
+pronunciation:(zhuang) [zouangue]
+pronunciation:(dub) [deub]
+pronunciation:(Rn'B) [érénebi]
+
+
+
+#=================================================================#
+### DYNAMIC CONCEPTS ####
+#=================================================================#
+
+
+dynamic:robotname
+dynamic:friendlyname
+dynamic:all_descriptions
+dynamic:all_languages
+dynamic:available_languages
+dynamic:myrobotname
+
+dynamic:app-name
+dynamic:app-dance
+dynamic:app-game
+dynamic:app-story
+dynamic:users_names
+
+
+dynamic:klg_thing
+dynamic:klg_definition
+dynamic:klg_date
+dynamic:registered_name
+
+####test
+dynamic:robot_abilities
+dynamic:topic_trigger1
+dynamic:topic_trigger2
+dynamic:topic_trigger3
+dynamic:topic_trigger4
+
+#=================================================================#
+###conditioned skin ####
+#=================================================================#
+s:($third_person_gender==fem *) ^replace(il, elle, 1) ^replace(étudiant, étudiante, 1)
+
+#==================================================================#
+##### Robot concepts #####
+#==================================================================#
+concept:(ald_robots) [~robotname ~myrobotname Nao Pepper Romeo]
+
+#==================================================================#
+##### Voice tweaking #####
+#==================================================================#
+concept:(neutral) \style=neutral\ \vct=105\ \rspd=110\
+concept:(joyful) \style=joyful\ \vct=95\ \rspd=90\
+concept:(neutral_slow) \style=neutral\ \vct=105\ \rspd=100\
+
+concept:(hello)
+[
+    hello
+    salut
+    bonjour
+    bonsoir
+]
+
+concept:(thank_you)
+[
+    "je te [remercie "dis merci"]"
+    "merci {beaucoup infiniment "du fond du coeur"}"
+    "tous mes remerciements"
+    "c'est gentil"
+    "ça me touche"
+]
+
+
+concept:(bye)
+[
+    "au revoir"
+    "ciao"
+    "à plus"
+    "à plus tard"
+    "à bientôt"
+]
+
+concept:(help)
+[
+    "aide-moi"
+    "à l'aide"
+    "{comment} peux-tu m'aider ?"
+    "{comment} tu peux m'aider ?"
+    "[~can_you_request "saurais-tu" "{est-ce que} tu saurais"] me [renseigner "donner ["une [info information]" "un renseignement" "des [infos informations renseignements]"]"] ?"
+    "j'ai besoin ["d'un renseignement" d'informations "d'une [information info]" "de renseignements" d'aide]"
+    "donne-moi un coup de main"
+    "je cherche ["une [info information]" "un renseignement" "des [infos informations renseignements]"]"
+]
+
+concept:(shut_up)
+[
+    "{"par pitié"} ["tais toi" "t'es toi" silence "{ferme} ta gueule" ferme-la "la ferme"]"
+    "~vb_ask_pouvoir ["fermer ta gueule" "te taire"]"
+    "arrête de parler"
+    "~i_dont_want_to [parler discuter]"
+    "[arrêter arrêtons] la [discussion conversation]"
+    "arrêtons de [parler discuter]"
+    "arrête {"un peu"} de [parler discuter]"
+    "ne parle plus"
+    "ne dis {plus} rien"
+    "pas un mot"
+    "plus un mot"
+]
+
+concept:(stop_it) ~shut_up
+
+
+concept:(stop_application)
+[
+    "["arrête !pas" "!pas arrêter" "quitte !pas" "!pas quitter"] {"cette application" l'application tout "[le ce] [programme logiciel dialogue jeu]" "de parler"}"
+    "["change !pas" "!pas changer"] [d'application "de [programme logiciel sujet jeu]"]"
+    stop "ça suffit" "{c'est} assez" "arrête {ça}"
+    "j'en ai [marre "ras-le-bol" "ma claque" "plein ["le [dos cul]" "les fesses"]"]"
+    "["je n'en" j'en] peux plus"
+    "tu {me} [soules "fais chier" m'emmerdes "me fatigues" m'épuises]"
+]
+
+
+
+
+
+concept:(restart_application)
+[
+    "[recommence recommencer relancer relancer redémarre redémarrer] {"cette application" l'application tout "[le ce] [programme logiciel dialogue]"}"
+]
+
+#/!\OLD CONCEPTS/!\ (can be used but not to use)#
+concept:(restart_it) [~restart_application]
+#/!\OLD CONCEPTS/!\ (can be used but not to use)#
+
+concept:(repeat_it)
+[
+    "{pardon} [
+    "[répète redis] ["[la ta] {dernière} phrase" "ce que tu viens de dire" "ce que tu as dit avant"]"
+    "["répète-moi" "redis-moi"] ["[la ta] {dernière} phrase" "ce que tu viens de dire" "ce que tu as dit avant"]"
+    "[repose répète redis] [la cette] {dernière} question"
+    "["repose-moi" "répète-moi" "redis-moi"] [la cette] {dernière} question"
+    "[~can_you_request "saurais-tu" "{"est-ce que"} tu saurais"] ["{me} ["répéter {ça}" "redire ça"]" "{me} ["reposer la question" "poser la question encore une fois" "répéter ce que tu as dit avant"]"] ?"
+    "["redis-moi ça" "redis-le-moi"]"
+    "[c'était c'est] quoi {déjà} la question?"
+    "qu'est-ce que ["tu ["m'as demandé" "me demandais" disais]" "~vb_pos_you_avoir dit"] ?"
+    "["tu ["m'as demandé" "me demandais" disais]" "~vb_pos_you_avoir dit"] quoi ?"
+    "plaît-il ?"
+    pardon
+    répète
+    ] {s'il-te-plait}"
+
+    "[
+        "[répète redis] ["[la ta] {dernière} phrase" "ce que tu viens de dire" "ce que tu as dit avant"] {s'il-te-plait}"
+        "["répète-moi" "redis-moi"] ["[la ta] {dernière} phrase" "ce que tu viens de dire" "ce que tu as dit avant"] {s'il-te-plait}"
+        "[repose répète redis] [la cette] {dernière} question {s'il-te-plait}"
+        "["repose-moi" "répète-moi" "redis-moi"] [la cette] {dernière} question {s'il-te-plait}"
+        "[~can_you_request "saurais-tu" "{"est-ce que"} tu saurais"] ["{me} ["répéter {ça}" "redire ça"]" "{me} ["reposer la question" "poser la question encore une fois" "répéter ce que tu as dit avant"]"] {s'il-te-plait} ?"
+        "["redis-moi ça" "redis-le-moi"] {s'il-te-plait}"
+        "[c'était c'est] quoi {déjà} la question {s'il-te-plait}?"
+        "qu'est-ce que ["tu ["m'as demandé" "me demandais" disais]" "~vb_pos_you_avoir dit"] {s'il-te-plait} ?"
+        "["tu ["m'as demandé" "me demandais" disais]" "~vb_pos_you_avoir dit"] quoi {s'il-te-plait} ?"
+        "plaît-il {s'il-te-plait} ?"
+        "pardon"
+        "répète {s'il-te-plait}"
+    ]"
+]
+
+
+concept:(come_to_me)
+[
+    "viens [ici là "par [ici là]" "près de moi" "vers moi" "plus près" "à côté de moi"]"
+    "mets-toi ["près de moi" "à côté de moi" "plus près"]"
+    #ici là
+    "plus près"
+    "au pied"
+    approche
+    approche-toi
+    rapproche-toi
+    "[avance marche] vers moi"
+]
+
+concept:(i_want_to) [~vb_pos_i_vouloir "~vb_pos_i_avoir envie de" "["je veux" "je voudrais" "j'aurai voulu" j'aimerais "je souhaiterais" "je souhaite"] {faire effectuer}" "[c'est "ça serait" "ça aurait été"] pour {faire effectuer}" "j'ai envie {"de faire" "d'effectuer"}"]
+concept:(vb_pos_i_vouloir) ["je [veux voudrais]"]
+concept:(vb_pos_i_avoir) [j'ai "j'en ai"]
+concept:(can_i) [
+    "{"est-ce que"} ["je [peux peut]" "je pourrais"]"
+    puis-je
+    pourrais-je
+    "j'aimerais {bien}"
+    "je [souhaiterais souhaite]"
+    "je [veux voudrais]"
+    "[est-il c'est] possible de"
+]
+
+concept:(i_dont_care) [
+    "je m'en [fiche fous moque branle tamponne cogne] {de des du}"
+    "je m'en [bats tamponne] ["les couilles" "la bite" l'oeil "le coquillard" l'oeuf l'os] {de des du}"
+    "{~vb_pos_i_avoir "j'en n'ai"} rien à [faire foutre tamponner battre] {de des du}"
+    "[ça cela] {ne} m'intéresse [pas plus] {"du tout" "le moins du monde"}"
+    "[~vb_imp_parle ~vb_imp_cause] de ça"
+    "{j'ai "je n'ai"} pas d'avis"
+]
+
+concept:(vb_imp_cause) ["{ne} {me m'en} cause pas"]
+concept:(vb_imp_parle) ["{ne} {me m'en} parle pas"]
+
+
+concept:(can_you) [~vb_ask_pouvoir ~vb_ask_savoir]
+#------------------------------------------------------------------#
+concept:(vb_pos_i_savoir) ["je sais"]
+concept:(vb_neg_i_savoir) ["je {ne} sais pas"]
+concept:(vb_i_savoir) [~vb_pos_i_savoir ~vb_neg_i_savoir]
+concept:(vb_pos_you_savoir) ["tu [sais saurais]"]
+concept:(vb_neg_you_savoir) ["tu {ne} [sais saurais] pas"]
+concept:(vb_int_you_savoir) [sais-tu saurais-tu]
+#"ne [sais-tu saurais-tu] pas"
+concept:(vb_ask_savoir) ["est-ce que ~vb_pos_you_savoir" ~vb_pos_you_savoir ~vb_int_you_savoir ~vb_neg_you_savoir]
+#------------------------------------------------------------------#
+concept:(vb_pos_i_pouvoir) ["je peux"]
+concept:(vb_neg_i_pouvoir) ["je {ne} peux [pas plus]"]
+concept:(vb_int_i_pouvoir) [puis-je "je peux"]
+concept:(vb_i_pouvoir) [~vb_pos_i_pouvoir ~vb_neg_i_pouvoir]
+concept:(vb_pos_you_pouvoir) ["tu [peux pourrais]"]
+concept:(vb_neg_you_pouvoir) ["tu {ne} [peux pourrais] pas"]
+concept:(vb_int_you_pouvoir) [peux-tu pourrais-tu]
+#"ne [peux-tu pourrais-tu] pas"
+concept:(vb_you_pouvoir) [~vb_pos_you_pouvoir ~vb_neg_you_pouvoir]
+concept:(vb_ask_pouvoir) ["est-ce que ~vb_pos_you_pouvoir" ~vb_pos_you_pouvoir ~vb_int_you_pouvoir ~vb_neg_you_pouvoir]
+#------------------------------------------------------------------#
+
+#------------------------------------------------------------------#
+#==================================================================#
+##### Human affirmative inputs #####
+#------------------------------------------------------------------#
+
+### GREETINGS ###
+
+
+
+
+
+### NEUTRAL INPUTS ###
+
+concept:(i_didnt_understand) [
+    "{désolé excuse-moi} ["je n'ai" j'ai] [pas rien] [compris saisi pigé capté entendu]"
+    "{désolé excuse-moi} ["je n'ai" j'ai] rien pané"
+    "{désolé excuse-moi} je {ne} [comprends pige capte] pas {"de quoi tu parles"}"
+    "de quoi ["tu parles" "[t'es "tu es"] en train de parler"] ?"
+    "["tu parles" "[t'es "tu es"] en train de parler"] de quoi ?"
+]
+
+concept:(you_didnt_understand) [
+    "["tu {ne} [comprends piges captes]" "t'entraves"] [rien makache queudale pas "quelque chose"]"
+    "c'est [vraiment absolument carrément] pas {"du tout"} ça"
+    "["tu n'as" t'as] {toujours} [rien "pas {bien}"] compris"
+]
+
+concept:(how_are_you) [
+    "comment ["ça va" "tu vas" "tu te sens"]"
+    "tu vas bien"
+    "ça va [bien]"
+    "la [forme pêche patate]"
+    "~you_are en forme"
+]
+
+concept:(im_good) [
+    "[~vb_pos_i_être "je me sens"] [bien "en forme"]"
+    "ça va {bien}"
+    super
+    impec
+    bien
+    "~vb_pos_i_avoir [la une] [forme pêche patate] {d'enfer}"
+    "je péte la forme"
+    "ça [roule gaze]"
+    "tout va bien"
+]
+
+concept:(im_ok) [
+    couci-couça
+    moyen
+    "["on fait" "ça peut"] aller"
+    "{"comme ci"} comme ça"
+    "pas trop mal"
+]
+
+concept:(i_dont_feel_good) [
+    bof
+    "pas ["du tout" "{très trop} bien" terrible]"
+    "{super très} mal"
+    "moins bien"
+    "ça {ne} va pas {fort}"
+    "[~vb_neg_i_être "["je {ne} me sens" "j'me sens"] pas"] [super "{très} bien" "{au} top" terrible génial "[en "au mieux de ma"] forme"]"
+    "{"je me sens"} de moins en moins bien"
+    "j'ai connu mieux"
+    "ça va ["{très plutôt assez vraiment} mal" "pas {très} bien"]"
+    "j'ai le cafard"
+    "je suis {"un peu" vraiment} déprimé"
+]
+
+concept:(im_sick) [
+    "~vb_pos_i_être {"un peu" très} [malade enrhumé barbouillé]"
+    "~vb_pos_i_avoir ["{très} mal ["à la [tête gorge]" "au ventre"]" "la grippe" "un [rhume torticolis]" "une [angine migraine gastro otite]" "de la toux" "des maux de tête"]"
+    "je tousse"
+]
+
+
+#------------------------------------------------------------------#
+#CONSENT#
+#------------------------------------------------------------------#
+
+concept:(yes) [
+    oui
+    ouais
+    yes
+    yep
+    "bien sûr"
+    "bien évidemment"
+    "évidemment"
+    "absolument"
+    ]
+
+
+concept:(yes_int_neg)[
+    si
+    sisi
+    "si si"
+    sisisi
+    "si si si"
+    ]
+
+
+concept:(confirmation) [ok okay exact allez
+        "{oui ouais} [
+            "s'il te plait"
+            "s'il vous plait"
+            "voilà"
+            "c'est bien ça"
+            "c'est {bien} cela"
+            "avec plaisir"
+            "pourquoi pas"
+            "je te l'accorde"
+            "plutot {oui ouais}"
+            "{"["on va dire" "bien sur" évidemment] que"} c'est vrai"
+            "on va dire ça"
+            "c'est [exact certain sur ça]"
+            "tout a fait"
+            "bien dit"
+            carrément absolument assurément certainement évidemment parfaitement précisément sûrement
+            exactement  grave certes d'accord  entendu volontiers complètement
+            "en effet"
+            "on peut dire ça"
+            "c'est {"un peu" plutot} vrai"
+            "["bonne" excellente] idée"
+            "ça [roule marche]"
+            "je sais"
+            "très bien"
+            "[quelques des] fois"
+            parfois rarement beaucoup
+            ]"
+        ]
+
+
+#answer to a propal#
+concept:(approval)
+[
+oui
+d'accord
+"pourquoi pas"
+"["bonne" excellente] idée"
+carrément
+entendu
+"avec plaisir"
+"on va faire ça"
+"faisons comme [ça cela ceci]"
+ouais
+ok
+okay
+allez
+vas-y
+"c'est parti"
+"on [essaye tente essaie] {ça}"
+"on peut [essayer tenter] {ça}"
+volontier
+"ça roule"
+"ça marche"
+"si tu veux"
+"comme tu veux"
+"si ça te fait plaisir"
+"si ça peut te faire plaisir"
+"c'est {bien} parce que c'est toi"
+]
+
+
+
+#------------------------------------------------------------------#
+#DISAGREEMENT#
+#------------------------------------------------------------------#
+concept:(no) [
+    non
+    nope
+    nan
+    "non non"
+    "non non {et} non"
+    "pas du tout"
+    "absolument pas"
+    ]
+
+concept:(refusal)[
+        bof
+        "non merci"
+        "{non} [
+            "{non} ça [ira "va aller"]"
+            "pas [vraiment "du tout" "le moins du monde" spécialement question]"
+            aucunement nullement jamais
+            "[surtout absolument] pas"
+            "tu peux {toujours} [rêver courir rouler]"
+            "t'as rêvé"
+            "cause toujours"
+            "pas [maintenant vraiment tellement forcément trop "tout a fait" "pour [l'instant "le moment"]"]"
+            "c'est [faux "pas [ça vrai nécessaire "la peine"]"]"
+            "trop pas"
+            "ça {ne} te regarde pas"
+            "de quoi tu te mêles"
+            "qu'est ce que t'en as a [foutre faire]"
+            "occupe toi de tes [affaires oignons fesses]"
+            "jamais de la vie"
+            "ça {ne} me ["dit rien" "[tente parle] pas"]"
+            "sans façon"
+            "{"y a"} pas moyen"
+            "j'en ai assez entendu"
+            "tu ["te trompes" "as tort"]"
+            "pas grand-chose"
+            ]"
+        ]
+
+
+#--------------------

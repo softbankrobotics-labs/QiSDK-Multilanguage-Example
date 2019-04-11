@@ -1,0 +1,8 @@
+topic: ~welcome()
+
+proposal: %start Je parle français!
+# Replying to speech
+u:(~hello) ~hello
+u:(["~can_you parler" parle parlons] anglais) Es-tu sûr de vouloir parler anglais?
+        u1:(~yes) Bien sûr, allons-y! ^endDiscuss(switch_to_english)
+        u1:(~no) Ok, pas de soucis!
