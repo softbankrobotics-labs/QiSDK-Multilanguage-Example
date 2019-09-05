@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SwitchLanguage</string>
+    <string name="english">EN</string>
+    <string name="french">FR</string>
+    <string name="welcome_title">Bienvenue</string>
+</resources>
